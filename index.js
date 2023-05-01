@@ -34,12 +34,50 @@ const gatherInfo = () => {
       name: 'shapeColor',
       message: 'What color do you want the shape to be?',
     },
-  ]);
-};
+  ])
+}
 
 
-const generateSVG = ({text, textColor, shape}) =>
-`<svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
+// const fs = require('fs');
+// function createLogo() {
+// 	inquirer.prompt(questions)
+// 		.then(data => {
+// 			console.log(data)
+// 			let shape = ""
+// 			if (data.shape === "Circle") {
+// 				shape = new Circle()
+
+// 			}
+// 			if (data.shape === "Triangle") {
+// 				shape = new Triangle()
+
+// 			}
+
+// 			if (data.shape === "Square") {
+// 				shape = new Square()
+
+// 			}
+// 			shape.setColor(data.color)
+// 			console.log(shape)
+// 			return `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+// 		${shape.render()
+// 				}
+	
+// 		<text x="150" y="125" font-size="60" text-anchor="middle" fill="${data.textColor}">${data.logo}</text>
+	
+// 	</svg>`
+
+// 		})
+// 		.then(svg=>{
+// 			console.log(svg)
+// 			fs.writeFileSync("logo.svg", svg)
+// 		})
+// }
+// createLogo()
+
+
+const generateSVG = ({text, textColor}) => 
+`<svg version='1.1' width='300' height='200' xmlns='http://www.w3.org/2000/svg'>
 
  ${shape.render()}
 
@@ -50,7 +88,7 @@ const generateSVG = ({text, textColor, shape}) =>
 
 const init = () => {
   gatherInfo()
-  .then((data) => writeFile('logo.svg', generateSVG(data)))
+  .then((data) => writeFile('./examples/logo.svg', generateSVG(data)))
   .then(() => console.log('Successfully generated logo.svg'))
   .catch((err) => console.error(err));
 };
