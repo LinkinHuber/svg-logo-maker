@@ -1,6 +1,5 @@
 const inquirer = require('inquirer');
 const { writeFile } = require('fs').promises;
-//const {Square, Circle, Triangle} = require('./lib/shapes')
 
 
 const gatherInfo = () => {
@@ -20,8 +19,8 @@ const gatherInfo = () => {
     },
     {
       type: 'input',
-      name: 'textcolor',
-      message: 'What color do you want your text to be?',
+      name: 'textColor',
+      message: 'What color do you want the text to be?',
     },
     {
       type: 'list',
@@ -31,21 +30,19 @@ const gatherInfo = () => {
     },
     {
       type: 'input',
-      name: 'shapecolor',
-      message: 'What color do you want your shape to be?',
+      name: 'shapeColor',
+      message: 'What color do you want the shape to be?',
     },
   ]);
 };
 
 
-const generateSVG = ({text, textcolor, shape, shapecolor}) =>
+const generateSVG = ({text, textColor, shape}) =>
 `<svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
 
+ ${shape.render()}
 
-
- shape.setColor('${shapecolor}');
-
- <text x='150' y='125' font-size='60' text-anchor='middle' fill='${textcolor}'>${text}</text>
+ <text x='150' y='125' font-size='60' text-anchor='middle' fill='${textColor}'>${text}</text>
 
  </svg>`
 
