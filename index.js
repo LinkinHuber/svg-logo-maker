@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const { Square, Circle, Triangle } = require('./lib/shapes.js');
+const {Square, Circle, Triangle} = require('./lib/shapes.js');
 
 
 //Goes through a series of prompts and asks for the users input on text, text color, shape, and shape color. Also have an if else statement that validates whether or not your text is 3 characters long.
@@ -39,7 +39,7 @@ const gatherInfo = () => {
 };
 
 
-//This function takes the user data and then sees what shape is selected from the list of choices matches it up with the proper shape class it creates that new shape which is pulled from the shapes.js file plugs it into the svg code along with all of the other user inputed data like shape color, text, and text color. After thats all said and done a new svg file is created using the user input. 
+//This function takes the user data and then sees what shape is selected from the list of choices matches it up with the proper shape class it creates that new shape which is pulled from the shapes.js file plugs it into the svg code along with all of the other user inputed data like shape color, text, and text color. After thats all said and done a new svg file is created using the user input which will then log "Generated logo.svg" to the console. 
 function createShapeSVG() {
   gatherInfo()
     .then(data => {
