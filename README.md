@@ -1,14 +1,14 @@
 # svg-logo-maker
 
- ## Table of Contents
-  * [Acceptance Criteria](#acceptance-criteria)
-  * [What was the goal of this project?](#what-was-the-goal-of-this-project)
-  * [Installation](#installation)
-  * [Usage](#usage) 
-  * [Tests](#tests)
-  * [Link to the demo video](#link-to-the-demo-video)
-  * [Screenshots of webpage](#screenshots-of-webpage)
-  * [Questions?](#questions)
+## Table of Contents
+* [Acceptance Criteria](#acceptance-criteria)
+* [What was the goal of this project?](#what-was-the-goal-of-this-project)
+* [Installation](#installation)
+* [Usage](#usage) 
+* [Tests](#tests)
+* [Link to the demo video](#link-to-the-demo-video)
+* [Screenshots of webpage](#screenshots-of-webpage)
+* [Questions?](#questions)
 
 ## Acceptance Criteria
 - GIVEN a command-line application that accepts user input
@@ -30,7 +30,7 @@
 - The goal of this project was to take user input and create a logo in the form of an svg file. I achieved this by asking the user a series of prompts gathering info on the following 4 things... text, text color, shape, and shape color. Once the user goes through the prompts it then takes that information and creates a logo like the one listed below. 
 
 ## Installation
-- This is ran through the integrated terminal using node and is triggered by typing in the following command, `"node index"` as long as your in the project folder.n
+- This is ran through the integrated terminal using node and is triggered by typing in the following command, `"node index"` as long as your in the project folder.
 
 ## Usage 
 - Used to create a small svg logo in the form of a shape with 3 characters in the middle of it.
