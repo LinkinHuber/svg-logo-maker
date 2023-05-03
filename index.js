@@ -65,8 +65,8 @@ function createShapeSVG() {
 
     })
     .then(svg => {
-      fs.writeFileSync('./examples/logo.svg', svg);
-      console.log('Generated logo.svg');
+      fs.writeFileSync(`./examples/logo.svg`, svg);
+      console.log(`Generated logo.svg`); 
     });
 };
 //Calling the above function 
